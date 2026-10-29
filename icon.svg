@@ -1,0 +1,24 @@
+<svg width="1024" height="1024" viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#1f1f28"/>
+      <stop offset="1" stop-color="#16161d"/>
+    </linearGradient>
+  </defs>
+
+  <!-- tile de fundo -->
+  <rect x="0" y="0" width="1024" height="1024" rx="200" fill="url(#bg)"/>
+  <rect x="6" y="6" width="1012" height="1012" rx="194" fill="none" stroke="#363646" stroke-width="6"/>
+
+  <!-- coluna 1 (crystalBlue) -->
+  <rect x="180" y="250" width="192" height="290" rx="26" fill="#7e9cd8"/>
+  <rect x="180" y="580" width="192" height="190" rx="26" fill="#7e9cd8" opacity="0.55"/>
+
+  <!-- coluna 2 (springGreen) -->
+  <rect x="416" y="250" width="192" height="170" rx="26" fill="#98bb6c" opacity="0.55"/>
+  <rect x="416" y="460" width="192" height="310" rx="26" fill="#98bb6c"/>
+
+  <!-- coluna 3 (carpYellow) -->
+  <rect x="652" y="250" width="192" height="240" rx="26" fill="#e6c384"/>
+  <rect x="652" y="530" width="192" height="240" rx="26" fill="#e6c384" opacity="0.55"/>
+</svg>

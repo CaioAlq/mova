@@ -1,0 +1,53 @@
+# Node
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.npm
+.yarn/cache
+.pnp.*
+
+# Rust / Cargo
+src-tauri/target/
+**/*.rs.bk
+
+# Tauri gerados em build
+src-tauri/gen/schemas/
+*.AppImage
+*.deb
+*.rpm
+*.dmg
+*.app
+*.exe
+*.msi
+
+# Variáveis de ambiente
+.env
+.env.*
+!.env.example
+
+# Logs
+*.log
+logs/
+
+# Sistema operacional
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Editors
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.netrwhist
+
+# Temporários / cache
+.cache/
+dist/
+tmp/
+
+# A regra global "Icon?" (arquivo Icon do macOS) também pega a pasta "icons" no Mac,
+# que não diferencia maiúsculas. Os ícones do app precisam ir para o repositório.
+!src-tauri/icons/

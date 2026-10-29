@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mova</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div id="app">
+
+      <!-- Sidebar -->
+      <aside id="sidebar">
+        <header class="sidebar-header" data-tauri-drag-region>
+          <span data-tauri-drag-region>Painéis</span>
+          <button id="reload-app-btn" class="sidebar-reload-btn" title="Recarregar">↺</button>
+        </header>
+        <nav id="board-list"></nav>
+        <div class="sidebar-footer">
+          <button id="tags-btn" class="btn-sm">Tags</button>
+          <button id="new-board-btn" class="btn-sm">Novo painel</button>
+        </div>
+      </aside>
+
+      <!-- Área principal -->
+      <main id="main">
+
+        <!-- Topbar -->
+        <header id="board-header" class="hidden" data-tauri-drag-region>
+          <span id="board-title" data-tauri-drag-region></span>
+          <div class="board-actions" data-tauri-drag-region>
+            <button id="add-column-btn" class="btn-sm">Nova coluna</button>
+            <button id="delete-board-btn" class="btn-sm danger">Excluir painel</button>
+          </div>
+        </header>
+
+        <!-- Colunas + arquivo lado a lado -->
+        <div id="columns" class="hidden"></div>
+
+        <!-- Empty state -->
+        <div id="empty-state">
+          <span>Nenhum painel selecionado.</span>
+          <button id="empty-new-board" class="btn-sm">Criar primeiro painel</button>
+        </div>
+
+      </main>
+    </div>
+
+    <!-- Overlay de detalhe do card -->
+    <div id="card-overlay" class="overlay hidden">
+      <div class="card-detail">
+        <header class="detail-header">
+          <input id="detail-title" class="detail-title-input" placeholder="Título do card" />
+          <button id="close-detail" class="detail-close">✕</button>
+        </header>
+
+        <div class="card-detail-body">
+          <div class="detail-flags">
+            <div class="flag-group">
+              <span class="flag-label">Prioridade</span>
+              <div id="detail-priority-wrap" class="custom-select-wrap">
+                <div id="detail-priority-btn" class="custom-select-btn">
+                  <span id="detail-priority-label">—</span>
+                  <span class="custom-select-arrow">▾</span>
+                </div>
+                <div id="detail-priority-menu" class="custom-select-menu hidden">
+                  <div class="custom-select-option" data-value="">—</div>
+                  <div class="custom-select-option" data-value="high">Alta</div>
+                  <div class="custom-select-option" data-value="medium">Média</div>
+                  <div class="custom-select-option" data-value="low">Baixa</div>
+                </div>
+              </div>
+            </div>
+            <div class="flag-group">
+              <span class="flag-label">Data de entrega</span>
+              <div id="detail-due-wrap" class="datepicker-wrap">
+                <input id="detail-due" type="text" readonly placeholder="—" />
+                <div id="detail-due-picker" class="datepicker hidden"></div>
+              </div>
+            </div>
+            <div class="flag-group">
+              <span class="flag-label">Tags</span>
+              <div id="detail-tag-wrap" class="custom-select-wrap">
+                <div id="detail-tag-btn" class="custom-select-btn">
+                  <span id="detail-tag-label">—</span>
+                  <span class="custom-select-arrow">▾</span>
+                </div>
+                <div id="detail-tag-menu" class="custom-select-menu hidden"></div>
+              </div>
+            </div>
+          </div>
+
+          <div id="tag-list" class="tag-list"></div>
+
+          <div>
+            <div class="desc-toolbar">
+              <button id="edit-mode-btn" class="seg active">Editar</button>
+              <button id="view-mode-btn" class="seg">Visualizar</button>
+            </div>
+            <textarea id="desc-edit" class="desc-edit" placeholder="Descrição em markdown..."></textarea>
+            <div id="desc-view" class="desc-view hidden"></div>
+          </div>
+        </div>
+
+        <footer class="detail-footer">
+          <button id="archive-card-btn" class="btn-sm">Arquivar</button>
+          <button id="delete-card-btn" class="btn-sm danger">Excluir</button>
+          <button id="save-card-btn" class="btn-primary">Salvar</button>
+        </footer>
+      </div>
+    </div>
+
+    <!-- Modal de gerenciamento de tags globais -->
+    <div id="tags-overlay" class="overlay hidden">
+      <div class="tags-modal">
+        <header class="tags-modal-header">
+          <span>Tags</span>
+          <button id="close-tags-btn" class="detail-close">✕</button>
+        </header>
+        <div id="global-tags-list" class="global-tags-list"></div>
+        <div class="global-tag-create">
+          <input id="new-tag-label" type="text" placeholder="Nome da tag" />
+          <input id="new-tag-color" type="color" value="#5090d0" />
+          <button id="create-tag-btn" class="btn-sm">+ criar</button>
+        </div>
+      </div>
+    </div>
+
+    <script type="module" src="main.js"></script>
+  </body>
+</html>
