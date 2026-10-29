@@ -101,9 +101,9 @@ src/                  frontend
 
 O frontend nunca toca no disco: toda leitura e gravação passa por um comando do Rust.
 
-## Feito com IA
+## Como foi feito
 
-Este projeto foi construído com assistentes de IA (*vibe coding*): o código foi escrito pela IA. O meu papel foi decidir o que o app faz e como ele se comporta, testar o uso de verdade e pedir os ajustes, como a seta para a próxima coluna, os títulos cortados com "…" e o destaque de onde o card vai cair ao arrastar.
+Desenvolvido com assistentes de IA, com testes e com o meu uso real guiando cada ajuste.
 
 ## Licença
 
