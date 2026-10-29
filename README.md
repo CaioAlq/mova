@@ -48,7 +48,7 @@ Os instaladores ficam em [Releases](https://github.com/CaioAlq/mova/releases): `
 
 O app não é assinado (assinatura da Apple e da Microsoft é paga), então o sistema avisa na primeira vez:
 
-- **macOS:** se aparecer "não pode ser aberto", rode `xattr -dr com.apple.quarantine /Applications/Mova.app` e abra de novo.
+- **macOS:** se aparecer "não pode ser aberto", rode no terminal `xattr -dr com.apple.quarantine /Applications/Mova.app` e abra de novo.
 - **Windows:** no aviso do SmartScreen, clique em "Mais informações" e depois em "Executar assim mesmo".
 
 ## Como rodar a partir do código
