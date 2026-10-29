@@ -1,5 +1,7 @@
 # Mova
 
+[![CI](https://github.com/CaioAlq/mova/actions/workflows/ci.yml/badge.svg)](https://github.com/CaioAlq/mova/actions/workflows/ci.yml)
+
 Kanban pessoal, leve e local, para desktop. Feito com **Rust + Tauri** no backend e **JavaScript puro** no frontend, com tema escuro.
 
 ![Mova logo ao abrir, sem painéis](docs/screenshots/vazio.png)
@@ -40,7 +42,16 @@ Como são arquivos JSON comuns, dá para fazer backup só copiando a pasta. A gr
 2. **Salvar os dados na nuvem**, começando pelo **Google Drive**.
 3. **Integração com o Google Agenda**, para os prazos dos cards aparecerem na agenda.
 
-## Como rodar
+## Baixar
+
+Os instaladores ficam em [Releases](https://github.com/CaioAlq/mova/releases): `.dmg` para macOS, `.exe`/`.msi` para Windows e `.AppImage`/`.deb` para Linux.
+
+O app não é assinado (assinatura da Apple e da Microsoft é paga), então o sistema avisa na primeira vez:
+
+- **macOS:** se aparecer "não pode ser aberto", rode `xattr -dr com.apple.quarantine /Applications/Mova.app` e abra de novo.
+- **Windows:** no aviso do SmartScreen, clique em "Mais informações" e depois em "Executar assim mesmo".
+
+## Como rodar a partir do código
 
 **Pré-requisitos**
 
